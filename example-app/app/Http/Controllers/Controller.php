@@ -21,10 +21,10 @@ class Controller extends BaseController
     {
         $validator = Validator::make($request->all(), [
             'start' => 'required|date|before:end',
-            'end' => 'required|date|after:start',
+            'end' => 'required|date',
         ], [], [
-            'start' => 'Start',
-            'end' => 'End',
+            'start' => 'day1',
+            'end' => 'day2',
         ]);
 
         if ($validator->fails()) {

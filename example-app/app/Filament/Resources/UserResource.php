@@ -24,15 +24,13 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Forms\Components\DatePicker::make('start')
-                    ->label('Foo')
-                    ->validationAttribute('Foo')
-                    ->autofocus()
+                    ->label('day1')
+                    ->validationAttribute('day1')
                     ->required()
-                    ->rule('before:end'),
+                    ->rule('before:day2'),
                 Forms\Components\DatePicker::make('end')
-                    ->label('Hoge')
-                    ->validationAttribute('Hoge')
-                    ->autofocus()
+                    ->label('day2')
+                    ->validationAttribute('day2')
                     ->required(),
             ]);
     }
