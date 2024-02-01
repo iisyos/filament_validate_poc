@@ -23,3 +23,8 @@ php artisan make:filament-user
 # Email: admin@example.com
 # Password: password
 ```
+
+Create `User` Resource.
+```bash
+php artisan make:filament-resource User
+```
